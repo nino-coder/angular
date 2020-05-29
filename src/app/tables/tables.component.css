@@ -1,0 +1,14 @@
+table, td, th {  
+    border: 1px solid #ddd;
+    text-align: left;
+    padding:7px;
+}
+  
+table {
+    border-collapse: collapse;
+    position:absolute;
+}
+.tableContainer{
+    margin: 0 auto;
+    width:50%;
+}

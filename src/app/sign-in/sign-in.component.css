@@ -1,0 +1,93 @@
+
+.signinButton {
+	background-color:#337ab7;
+	border-radius:5px;
+	display:inline-block;
+	cursor:pointer;
+	color:#fff;
+	/* font-family:Arial; */
+	font-size:16px;
+	padding:10px 17px;
+    text-decoration:none;
+    border:0;
+    outline:none;
+	/* text-shadow:0px 1px 0px #132a70; */
+}
+.signinButton:hover {
+	/* background:linear-gradient(to bottom, #046cc7 5%, #2dabf9 100%); */
+    background-color:#046cc7;
+}
+.signinButton:disabled{
+    background:#2783dabd;
+}
+.signinButton:active {
+	position:relative;
+    top:1px;
+}
+input{
+    display: block;
+    height: 35px;
+    width: 95%;
+    font-size: 14px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    text-indent: 5px;
+    border: 1px groove #ccc ;
+    margin:5px 0;
+    outline:none;
+    border-style: groove;
+}
+label{
+    font-size:14px;
+}
+.signinComponent{
+    width: 35%;
+    margin: auto;
+    border: 1px solid ccc;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    position:absolute;
+    border-radius: 3px;
+}
+.inputsContainer{
+    padding: 10px 0 16px 16px;
+}
+form{
+    border: 1px solid lightgray;
+}
+section{
+    padding:1px 0 0 15px;
+    height: 40px;
+    background: lightgray;
+}
+h3{
+    margin-top: 7px;
+}
+@media screen and (max-width:767px){
+    .signinComponent{
+        width: 60%;}
+}
+.alert{
+    color:#f00;
+}
+input.ng-invalid {
+    border:1px solid #f00;
+}
+input.ng-untouched,
+input.ng-valid {
+    border-color:#ccc;
+}
+.check{
+    background: rgba(255,192,203,0.5);
+    text-indent: 15px;
+    color: darkred;
+    height: 35px;
+    border-radius: 5px;
+    width: 99%;
+    border: 1px solid #ccc;
+    margin-bottom: 15px;
+}
+.check div{
+    margin-top:7px;
+}

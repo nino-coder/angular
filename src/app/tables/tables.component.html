@@ -1,0 +1,19 @@
+<div class="tableContainer">
+  <h2>Users List</h2>
+  <table  >
+    <tr>
+      <th>Id.</th>
+      <th>name</th>
+      <th>username</th>
+      <th>email</th>
+      <th>website</th>
+    </tr>
+    <tr   *ngFor="let shipping of users | async">
+      <td> {{shipping.id}}</td>
+      <td> {{shipping.name}}</td>
+      <td> {{shipping.username}}</td>
+      <td> {{shipping.email}}</td>
+      <td> {{shipping.website}}</td>
+    </tr> 
+  </table>
+</div>
