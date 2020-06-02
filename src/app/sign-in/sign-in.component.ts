@@ -18,13 +18,13 @@ export class SignInComponent {
     innerWidth: any;
     innerHeight: any;
   signinForm: FormGroup;
+  
   ngOnInit() {
     // for determining where the put the context menu -- on the screen ;-) 
     this.innerWidth = window.innerWidth;
     this.innerHeight = window.innerHeight;
 
     }
-
    constructor(private fb: FormBuilder) {
     this.createForm();
   }
@@ -32,8 +32,8 @@ export class SignInComponent {
      
     this.signinForm = this.fb.group({
        username: ['', [Validators.required,Validators.pattern(/admin/)] ],
-       password: ['', Validators.required ],
-       validName:"admin",
+       password: ['', [Validators.required,Validators.pattern(/admin/)] ],
+      //  validName:"admin",
     });
   }
   

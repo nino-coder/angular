@@ -1,19 +1,15 @@
 
-<div class="signinComponent">
-     <div *ngIf="signinForm.controls['username']!=signinForm.controls['validName']&& signinForm.controls['username'].touched"class="check">
-         <!--<div *ngIf="signinForm.controls['username'].errors.required"> -->
-          username or password is inccorect.
-        
-        <!-- </div>  -->
-    </div> 
+<div ng-app="form" class="signinComponent" ng-controller="myCtrl">
+
   <form [formGroup]="signinForm" name="signinForm" novalidate>
     <section>
-    <h3>Angular Signin</h3></section>
+    <h3>Angular Signin</h3>
+  </section>
         <div class="inputsContainer">
           <label for="username">
             USERNAME
           </label>
-          <input class="form-control" formControlName="username" name="name" type="text" placeholder="username:admin">
+          <input class="form-control" ng-model="user" formControlName="username" id="username" type="text" placeholder="username:admin" my-directive>
           <div *ngIf="signinForm.controls['username'].invalid && (signinForm.controls['username'].dirty || signinForm.controls['username'].touched)" class="alert alert-danger">
             <div *ngIf="signinForm.controls['username'].errors.required">
               username is required.
@@ -22,17 +18,19 @@
           <label for="password">
             PASSWORD
           </label>
-          <input  class="form-control" formControlName="password" type="password"placeholder="password:admin" >
+          <input  class="form-control" formControlName="password" type="password"placeholder="password:admin" id="password" my-directive>
           <div *ngIf="signinForm.controls['password'].invalid && (signinForm.controls['password'].dirty || signinForm.controls['password'].touched)" class="alert alert-danger">
             <div *ngIf="signinForm.controls['password'].errors.required">
               password is required.
             </div>
         </div>
-        <button type="submit"
+        <a  [routerLink]="['../home']">
+        <button type="submit" 
         [disabled]="signinForm.pristine || signinForm.invalid" class="signinButton">
         Sign in
         </button>
-        
+        </a>
      </div>
       </form>
+      <!-- <div *ngIf=" as value; else elseBlock">{{value}}</div> -->
 </div>

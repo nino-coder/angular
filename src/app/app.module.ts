@@ -7,21 +7,25 @@ import { SignInComponent } from './sign-in/sign-in.component';
 import { RouterModule } from '@angular/router';
 import { TablesComponent } from './tables/tables.component';
 import { HttpClientModule } from '@angular/common/http';
+import { DetailsComponent } from './details/details.component';
 @NgModule({
 
   declarations: [
     AppComponent,
     SignInComponent,
-    TablesComponent
+    TablesComponent,
+    DetailsComponent,
   ],
   imports: [
     BrowserModule,
     ReactiveFormsModule,
     AppRoutingModule,
     HttpClientModule,
-    // ReactiveFormsModule,
     RouterModule.forRoot([
-      { path: '', component: SignInComponent }
+      { path: '',redirectTo: '/signin', pathMatch: 'full'  },
+      { path:'signin', component: SignInComponent},
+      { path: 'home', component:TablesComponent},
+      { path: 'details/:id', component: DetailsComponent },
     ])
   ],
   providers: [],

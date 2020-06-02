@@ -11,9 +11,23 @@ export class TablesComponent implements OnInit {
   constructor(
     private dataService: DataService
   ) { }
-  users;
+  users=[];
+  clicked=false;
   ngOnInit(): void {
-    this.users = this.dataService.getData();
+   this.users.push(this.dataService.getData()) ;
+  console.log(this.users[0][0])
+  console.log(this.users)
   }
-
+  
+  onClick(){
+    this.clicked = true;
+  }
+  remove(id){    
+  for(var i = 0; i < this.users[0][0].length; i++) {
+    if(this.users[0][0][i].id === id) {
+      this.users[0][0].splice(i, 1);
+  }
+  }
+  return this.users[0][0];
+}
 }
