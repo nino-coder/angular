@@ -31,3 +31,4 @@ export class DetailsComponent implements OnInit {
     console.log(this.user)
   }
 }
+

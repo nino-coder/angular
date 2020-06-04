@@ -31,4 +31,5 @@ import { DetailsComponent } from './details/details.component';
   providers: [],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }

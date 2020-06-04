@@ -22,4 +22,6 @@ export class AppComponent {
           this.items.push(data[key]);
     });
   }
+  
 }
+

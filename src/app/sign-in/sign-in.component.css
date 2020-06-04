@@ -64,9 +64,16 @@ section{
 h3{
     margin-top: 7px;
 }
-@media screen and (max-width:767px){
+
+@media screen and (max-width:480px){
     .signinComponent{
-        width: 60%;}
+        width: 50%;
+    }
+}
+@media screen and (max-width:768px){
+    .signinComponent{
+        width: 50%;
+    }
 }
 .alert{
     color:#f00;
@@ -90,4 +97,7 @@ input.ng-valid {
 }
 .check div{
     margin-top:7px;
+}
+button[disabled]{
+    cursor: not-allowed;
 }

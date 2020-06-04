@@ -1,6 +1,7 @@
 <div class="tableContainer">
-  <h2>Users List</h2>
+  
   <table>
+      <h2>Users List</h2>
     <tr>
       <th>Id.</th>
       <th>name</th>
@@ -9,21 +10,19 @@
       <th>website</th>
     </tr>
     
-    <tr *ngFor="let user of users[0][0];  index as productId" [attr.id]="user.id">
-    <a [routerLink]="['../details', user.id]" > 
-      <td>{{user.id}}</td> 
-    </a>
-      <td (click)="onClick()"> {{user.name}}</td>
+    <tr class="contextParent" *ngFor="let user of users[0]" (click)="onClick()">
+      <td> {{user.id}}</td> 
+      <td> {{user.name}}</td>
       <td> {{user.username}}</td>
       <td> {{user.email}}</td>
       <td> {{user.website}}</td>
-      <div *ngIf="clicked" id="panel">
-          <button (click)="remove(user.id)">
-            Delete
-          </button>
+      <div *ngIf="clicked" class="contextMenu">
           <a [routerLink]="['../details', user.id]">
             details
           </a>
+          <button (click)="remove(user.id)">
+            Delete
+          </button>
         </div>
     </tr> 
   </table>

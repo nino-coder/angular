@@ -36,6 +36,13 @@ export class SignInComponent {
       //  validName:"admin",
     });
   }
+  checker(a,b){
+    if(a!='admin' || b!='admin'){
+      return true;
+    }else{
+      return false
+    }
+  }
   
   
 }
